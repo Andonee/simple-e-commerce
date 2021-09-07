@@ -56,16 +56,16 @@ const useStyles = makeStyles(theme => ({
 	navbar__burger_line1: {
 		height: '2px',
 		width: '100%',
-		background: '#383838',
+		background: theme.palette.primary.main,
 	},
 	navbar__burger_line2: {
 		height: '2px',
 		width: '100%',
-		background: '#383838',
+		background: theme.palette.primary.main,
 	},
 	navbar__burger_line3: {
 		height: '2px',
 		width: '100%',
-		background: '#383838',
+		background: theme.palette.primary.main,
 	},
 }))

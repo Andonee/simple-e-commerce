@@ -60,14 +60,14 @@ const useStyles = makeStyles(theme => ({
 
 		'& > a': {
 			textDecoration: 'none',
-			color: '#383838',
+			color: theme.palette.primary.main,
 			fontSize: '1.2rem',
 			borderBottom: '2x solid transparent',
 			transition: 'all .3s ease-in',
 		},
 
 		'& > a:hover': {
-			borderBottom: '2px solid #383838 !important',
+			borderBottom: `2px solid ${theme.palette.primary.main} !important`,
 		},
 
 		[theme.breakpoints.down('sm')]: {
@@ -75,7 +75,7 @@ const useStyles = makeStyles(theme => ({
 			top: '70px',
 			right: 0,
 			flexDirection: 'column',
-			background: '#383838',
+			background: theme.palette.primary.main,
 			padding: 0,
 			margin: 0,
 			width: '300px',
@@ -103,7 +103,7 @@ const useStyles = makeStyles(theme => ({
 	},
 
 	nav_active: {
-		borderBottom: '2px solid #383838 !important',
+		borderBottom: `2px solid ${theme.palette.primary.main} !important`,
 
 		[theme.breakpoints.down('sm')]: {
 			borderBottom: 'none !important',

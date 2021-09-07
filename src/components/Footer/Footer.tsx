@@ -10,14 +10,14 @@ const Footer = () => {
 
 export default Footer
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
 	footer: {
 		width: '100%',
 		height: '70px',
-		background: '#383838',
+		background: theme.palette.primary.main,
 		color: '#a0a0a0',
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
-})
+}))
