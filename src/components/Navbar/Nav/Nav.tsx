@@ -2,7 +2,7 @@ import React from 'react'
 
 import { NavLink } from 'react-router-dom'
 
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 
 type NavProps = {
 	isOpen: boolean
@@ -48,7 +48,7 @@ const Nav = ({ isOpen, openMenuHandler }: NavProps) => {
 
 export default Nav
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme: Theme) => ({
 	nav: {
 		flexBasis: '20%',
 		maxWidth: '250px',
@@ -57,6 +57,7 @@ const useStyles = makeStyles(theme => ({
 		marginRight: '30px',
 		position: 'relative',
 		flexDirection: 'row',
+		zIndex: 1000000,
 
 		'& > a': {
 			textDecoration: 'none',

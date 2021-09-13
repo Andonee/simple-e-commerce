@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 import Nav from './Nav/Nav'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 	const classes = useStyles()
@@ -12,7 +13,9 @@ const Navbar = () => {
 	}
 	return (
 		<div className={classes.navbar}>
-			<div className={classes.logo}>Logo</div>
+			<Link to='/' style={{ textDecoration: 'none' }}>
+				<div className={classes.logo}>Logo</div>
+			</Link>
 			<Nav isOpen={isOpen} openMenuHandler={openMenuHandler} />
 			<div className={classes.navbar__burger} onClick={openMenuHandler}>
 				<div className={classes.navbar__burger_line1}></div>
@@ -25,7 +28,7 @@ const Navbar = () => {
 
 export default Navbar
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme: Theme) => ({
 	navbar: {
 		width: '100%',
 		height: '70px',
