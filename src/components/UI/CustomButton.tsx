@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button'
 import { withStyles, Theme } from '@material-ui/core/styles'
 
 type CustomButtonProps = {
-	onClick: () => void
+	onClick?: () => void
 	children: React.ReactNode
 	backgroundcolor?: 'primary' | 'success' | string
 	fontcolor?: string

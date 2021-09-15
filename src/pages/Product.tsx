@@ -74,9 +74,14 @@ export default Product
 const useStyles = makeStyles({
 	product: {
 		display: 'flex',
+		flexDirection: 'column',
 		justifyContent: 'space-around',
 		width: '90%',
 		margin: '50px auto',
+
+		'@media (min-width: 756px)': {
+			flexDirection: 'row',
+		},
 	},
 	imageContainer: {
 		flexBasis: '40%',
@@ -85,6 +90,11 @@ const useStyles = makeStyles({
 		flexBasis: '40%',
 		fontSize: '1.2rem',
 		textAlign: 'justify',
+		marginTop: '40px',
+
+		'@media (min-width: 756px)': {
+			marginTop: 0,
+		},
 	},
 	image: {
 		maxWidth: '500px',
